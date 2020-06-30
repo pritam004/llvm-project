@@ -12,6 +12,9 @@ add_subdirectory(clang-move)
 add_subdirectory(clang-query)
 add_subdirectory(pp-trace)
 add_subdirectory(tool-template)
+addsubdirectory(pass-one)
+addsubdirectory(pass-two)
+addsubdirectory(pass-three)
 
 # Add the common testsuite after all the tools.
 if(CLANG_INCLUDE_TESTS)
