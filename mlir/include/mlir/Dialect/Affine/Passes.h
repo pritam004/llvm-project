@@ -62,6 +62,9 @@ std::unique_ptr<OperationPass<FuncOp>> createLoopUnrollPass(
     int unrollFactor = -1, bool unrollFull = false,
     const std::function<unsigned(AffineForOp)> &getUnrollFactor = nullptr);
 
+////my pass
+std::unique_ptr<OperationPass<FuncOp>> createAffineloopinterchangePass();
+
 /// Creates a loop unroll jam pass to unroll jam by the specified factor. A
 /// factor of -1 lets the pass use the default factor or the one on the command
 /// line if provided.

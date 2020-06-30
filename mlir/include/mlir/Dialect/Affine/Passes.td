@@ -48,6 +48,15 @@ def AffineLoopInvariantCodeMotion
   let constructor = "mlir::createAffineLoopInvariantCodeMotionPass()";
 }
 
+
+//i have changed here
+def Affineloopinterchange
+    : FunctionPass<"affine-loop-interchange"> {
+  let summary = "Interchange loops for better locality and parallelism";
+  let constructor = "mlir::createAffineloopinterchangePass()";
+}
+
+//---------------------------------------------------------
 def AffineLoopTiling : FunctionPass<"affine-loop-tile"> {
   let summary = "Tile affine loop nests";
   let constructor = "mlir::createLoopTilingPass()";
