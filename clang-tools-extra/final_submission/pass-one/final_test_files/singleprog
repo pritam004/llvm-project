@@ -1,0 +1,21 @@
+
+all :program1 program2 program3 program4 program5 program6 
+program1: test1.cpp
+	$(bin)/pass-one $(file)>res.cpp 
+
+program2: res.cpp
+	$(bin)/pass-two res.cpp >res1.cpp
+
+program3: res1.cpp
+	$(bin)/pass-three res1.cpp >result.cpp 
+
+program4: result.cpp
+	$(bin)/clang result.cpp -o result.o 
+
+program5: 
+	cat result.cpp
+
+program6:
+	rm res.cpp
+	rm res1.cpp
+
